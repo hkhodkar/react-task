@@ -21,8 +21,8 @@ export default function NewProject({ onAddProject, onCancelProject }) {
 
         const newProject = {
             title: titleRef.current.value,
-            description: titleRef.current.value,
-            dueDate: titleRef.current.value,
+            description: descriptionRef.current.value,
+            dueDate: dueDateRef.current.value,
         }
         onAddProject(newProject);
     }
