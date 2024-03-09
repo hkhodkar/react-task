@@ -1,0 +1,4 @@
+                                        React Task Management
+
+Simple project which helps to practice useState, ref, forwardRef ,lifting up state and portal
+Tailwind css is used in this project for component styles
