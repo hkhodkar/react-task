@@ -14,10 +14,15 @@ const Modal = forwardRef(function ({ children, buttonCaption }, ref) {
         }
     })
 
+    function onCloseDialog(event) {
+        event.preventDefault();
+        dialogRef.current.close();
+    }
+
     return createPortal(
         <dialog ref={dialogRef} className="backdrop:bg-stone-900/90 p-4 rounded-md shadow-md">
             {children}
-            <form action="dialog" className="mt-4 text-right">
+            <form action="dialog" className="mt-4 text-right" onSubmit={onCloseDialog}>
                 <Button>{buttonCaption}</Button>
             </form>
         </dialog>,
